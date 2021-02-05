@@ -4,13 +4,21 @@ alias gb='git branch'
 alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gcm='
-  git checkout master 2>/dev/null ||
-  git checkout main'
+  if git diff-index --quiet HEAD; then
+    git checkout master 2>/dev/null ||
+    git checkout main
+  else
+    git status
+  fi'
 alias gcd='
-  git checkout develop 2>/dev/null ||
-  git checkout staging 2>/dev/null ||
-  git checkout master 2>/dev/null ||
-  git checkout main'
+  if git diff-index --quiet HEAD; then
+    git checkout develop 2>/dev/null ||
+    git checkout staging 2>/dev/null ||
+    git checkout master 2>/dev/null ||
+    git checkout main
+  else
+    git status
+  fi'
 
 alias ga='git add'
 alias gs='git status'
