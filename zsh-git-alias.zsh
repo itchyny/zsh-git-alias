@@ -21,6 +21,7 @@ alias gcd='
   fi'
 
 alias ga='git add'
+alias gap='git add --patch'
 alias gs='git status'
 alias gd='git diff'
 alias gdc='git diff --cached'
