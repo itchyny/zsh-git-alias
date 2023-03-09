@@ -25,7 +25,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gr='git rebase'
-alias gri='git rebase -i'
+alias gri='git rebase --interactive'
 alias gmd='git merge origin/develop'
 
 gm() { git commit ${*:+--comment="$*"} }
@@ -33,7 +33,7 @@ gam() { git commit --all ${*:+--comment="$*"} }
 gamend() { git commit --all --amend ${*:+--comment="$*"} }
 
 alias gf='git fetch'
-alias gpl='git pull -p'
+alias gpl='git pull --prune'
 alias gpo='git push origin'
 alias gpot='git push origin --tags'
 alias gpom='git push origin master'
