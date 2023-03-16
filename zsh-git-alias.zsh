@@ -29,9 +29,9 @@ alias gr='git rebase'
 alias gri='git rebase --interactive'
 alias gmd='git merge origin/develop'
 
-gm() { git commit ${*:+--comment="$*"} }
-gam() { git commit --all ${*:+--comment="$*"} }
-gamend() { git commit --all --amend ${*:+--comment="$*"} }
+gm() { git commit ${*:+--message="$*"} }
+gam() { git commit --all ${*:+--message="$*"} }
+gamend() { git commit --all --amend ${*:+--message="$*"} }
 
 alias gf='git fetch'
 alias gpl='git pull --prune'
